@@ -1,0 +1,3 @@
+# See coreutils installation from brew.sh
+GNUBINS=$(brew --prefix coreutils)/libexec/gnubin
+export PATH=$GNUBINS:$PATH

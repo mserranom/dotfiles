@@ -2,11 +2,16 @@
 
 # Install command-line tools using Homebrew.
 
-# Make sure we’re using the latest Homebrew.
-brew update
-
-# Upgrade any already-installed formulae.
-brew upgrade
+which -s brew
+if [[ $? != 0 ]] ; then
+    # Install Homebrew
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" </dev/null
+else
+    # Make sure we’re using the latest Homebrew.
+    brew update
+    # Upgrade any already-installed formulae.
+    brew upgrade
+fi
 
 # Install GNU core utilities (those that come with macOS are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
@@ -128,3 +133,4 @@ brew cleanup
 
 echo "The following software is not available in Homebrew:";
 echo "   -- Google Drive https://www.google.com/drive/download/";
+echo " -- NodeJS https://nodejs.org/en/download/";
