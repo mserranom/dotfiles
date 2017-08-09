@@ -82,7 +82,6 @@ brew install xz
 # Install other useful binaries.
 brew install ack
 brew install dark-mode
-#brew install exiv2
 brew install git
 brew install git-lfs
 brew install imagemagick --with-webp
@@ -99,7 +98,33 @@ brew install testssl
 brew install tree
 brew install vbindiff
 brew install webkit2png
+brew install youtube-dl
 brew install zopfli
+
+# Install some development tools
+brew install ant
+brew install awscli
+brew install mvnvm
+brew install watchman
+brew install yarn
+
+
+# Install cask software https://caskroom.github.io/
+brew cask install calibre
+brew cask install docker
+brew cask install google-chrome
+brew cask install firefox
+brew cask install scummvm
+brew cask install skype
+brew cask install slack
+brew cask install sourcetree
+brew cask install iterm2
+brew cask install transmission
+brew cask install visual-studio-code
+brew cask install vlc
 
 # Remove outdated versions from the cellar.
 brew cleanup
+
+echo "The following software is not available in Homebrew:";
+echo "   -- Google Drive https://www.google.com/drive/download/";
