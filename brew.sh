@@ -4,13 +4,14 @@
 
 which -s brew
 if [[ $? != 0 ]] ; then
-    # Install Homebrew
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" </dev/null
+  echo "installing homebrew"
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" </dev/null
 else
-    # Make sure we’re using the latest Homebrew.
-    brew update
-    # Upgrade any already-installed formulae.
-    brew upgrade
+  echo "homebrew installation found, updating+upgrading formulae"
+  # Make sure we’re using the latest Homebrew.
+  brew update
+  # Upgrade any already-installed formulae.
+  brew upgrade
 fi
 
 # Install GNU core utilities (those that come with macOS are outdated).
@@ -28,7 +29,7 @@ brew install gnu-sed --with-default-names
 # running `chsh`. To do so, run `sudo chsh -s /usr/local/bin/bash`.
 brew install bash
 brew tap homebrew/versions
-brew install bash-completion2
+brew install bash-completion
 
 # Switch to using brew-installed bash as default shell
 if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
@@ -50,7 +51,6 @@ brew install vim --with-override-system-vi
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
-brew install homebrew/php/php56 --with-gmp
 
 # Install font tools.
 brew tap bramstein/webfonttools
@@ -115,6 +115,8 @@ brew install yarn
 
 
 # Install cask software https://caskroom.github.io/
+
+
 brew cask install calibre
 brew cask install docker
 brew cask install google-chrome
@@ -133,4 +135,4 @@ brew cleanup
 
 echo "The following software is not available in Homebrew:";
 echo "   -- Google Drive https://www.google.com/drive/download/";
-echo " -- NodeJS https://nodejs.org/en/download/";
+echo "   -- NodeJS https://nodejs.org/en/download/";
