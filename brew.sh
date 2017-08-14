@@ -121,6 +121,7 @@ brew cask install calibre
 brew cask install docker
 brew cask install google-chrome
 brew cask install firefox
+brew cask install hyper
 brew cask install scummvm
 brew cask install skype
 brew cask install slack
