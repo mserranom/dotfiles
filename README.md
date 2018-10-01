@@ -1,5 +1,12 @@
 # Miguel's dotfiles
 
+## New Machine
+
+1. [Generate new ssh keys and configure github ssh credentials](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) (you'll likely be prompted to install xcode tools).
+2. Check out this repo.
+3. Run `source .brew`.
+4. Run `source .software_update` to update macOS and XCode tooling.
+
 ## Installation
 
 **Warning:** These dotfiles are heavy personalised for my macOS system. If you want to give them a try, you should first fork this repository, review the code, and remove things you don’t want or need.
